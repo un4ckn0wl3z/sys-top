@@ -1,8 +1,8 @@
 {
-  "name": "electron-starter",
-  "productName": "APP NAME",
+  "name": "sys-top",
+  "productName": "SysTop",
   "version": "1.0.0",
-  "description": "Simple starter package for Electron apps",
+  "description": "Monitor CPU App.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
