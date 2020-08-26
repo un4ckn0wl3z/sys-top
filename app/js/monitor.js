@@ -5,11 +5,19 @@ const cpu = osu.cpu;
 const mem = osu.mem;
 const os = osu.os;
 
+let cpuOverload = 80;
+
 // Run every 2 sec
 setInterval(() => {
   //
   cpu.usage().then((info) => {
     document.getElementById("cpu-usage").innerText = info + "%";
+    document.getElementById("cpu-progress").style.width = info + "%";
+    if (info > cpuOverload) {
+      document.getElementById("cpu-progress").style.background = "red";
+    } else {
+      document.getElementById("cpu-progress").style.background = "#30c88b";
+    }
   });
 
   cpu.free().then((info) => {
